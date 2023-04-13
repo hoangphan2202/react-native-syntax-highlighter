@@ -159,11 +159,7 @@ function NativeSyntaxHighlighter({
     SyntaxHighlighter
   );
   return (
-    <Pressable>
-     <ScrollView
-         contentInsetAdjustmentBehavior="automatic"
-         horizontal={true}
-     >
+
        <Highlighter
            {...rest}
            style={transformedStyle}
@@ -174,10 +170,10 @@ function NativeSyntaxHighlighter({
              fontSize
            }))}
        >
+         <Pressable>
          {children}
+         </Pressable>
        </Highlighter>
-     </ScrollView>
-    </Pressable>
   );
 }
 

@@ -199,27 +199,20 @@ function NativeSyntaxHighlighter(_ref10) {
 
   var Highlighter = highlighter === "prism" ? _prism2.default : _reactSyntaxHighlighter2.default;
   return _react2.default.createElement(
-    _reactNative.Pressable,
-    null,
+    Highlighter,
+    _extends({}, rest, {
+      style: transformedStyle,
+      horizontal: true,
+      renderer: nativeRenderer({
+        defaultColor: defaultColor,
+        fontFamily: fontFamily,
+        fontSize: fontSize
+      })
+    }),
     _react2.default.createElement(
-      _reactNative.ScrollView,
-      {
-        contentInsetAdjustmentBehavior: 'automatic',
-        horizontal: true
-      },
-      _react2.default.createElement(
-        Highlighter,
-        _extends({}, rest, {
-          style: transformedStyle,
-          horizontal: true,
-          renderer: nativeRenderer({
-            defaultColor: defaultColor,
-            fontFamily: fontFamily,
-            fontSize: fontSize
-          })
-        }),
-        children
-      )
+      _reactNative.Pressable,
+      null,
+      children
     )
   );
 }
