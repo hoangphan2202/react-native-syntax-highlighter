@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, Platform } from 'react-native';
+import { Text, ScrollView, Platform, Pressable } from 'react-native';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import SyntaxHighlighterPrism from 'react-syntax-highlighter/prism';
 import { createStyleObject } from 'react-syntax-highlighter/create-element';
@@ -159,18 +159,20 @@ function NativeSyntaxHighlighter({
     SyntaxHighlighter
   );
   return (
-    <Highlighter
-      {...rest}
-      style={transformedStyle}
-      horizontal={true}
-      renderer={(nativeRenderer({
-        defaultColor,
-        fontFamily,
-        fontSize
-      }))}
-    >
-      {children}
-    </Highlighter>
+    <Pressable >
+      <Highlighter
+          {...rest}
+          style={transformedStyle}
+          horizontal={true}
+          renderer={(nativeRenderer({
+            defaultColor,
+            fontFamily,
+            fontSize
+          }))}
+      >
+        {children}
+      </Highlighter>
+    </Pressable>
   );
 }
 
