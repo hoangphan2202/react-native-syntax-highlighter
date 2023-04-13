@@ -168,7 +168,6 @@ function NativeSyntaxHighlighter({
              defaultColor,
              fontFamily,
              fontSize,
-             padding: 0
            }))}
            customStyle={{ padding: 0, margin: 0 }}
        >

@@ -209,8 +209,7 @@ function NativeSyntaxHighlighter(_ref10) {
         renderer: nativeRenderer({
           defaultColor: defaultColor,
           fontFamily: fontFamily,
-          fontSize: fontSize,
-          padding: 0
+          fontSize: fontSize
         }),
         customStyle: { padding: 0, margin: 0 }
       }),
