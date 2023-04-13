@@ -162,9 +162,7 @@ function createNativeElement(_ref7) {
 function nativeRenderer(_ref8) {
   var defaultColor = _ref8.defaultColor,
       fontFamily = _ref8.fontFamily,
-      fontSize = _ref8.fontSize,
-      padding = _ref8.padding,
-      margin = _ref8.margin;
+      fontSize = _ref8.fontSize;
 
   return function (_ref9) {
     var rows = _ref9.rows,
@@ -176,8 +174,7 @@ function nativeRenderer(_ref8) {
         key: 'code-segment-' + i,
         defaultColor: defaultColor,
         fontFamily: fontFamily,
-        fontSize: fontSize,
-        padding: padding, margin: margin
+        fontSize: fontSize
       });
     });
   };
@@ -213,9 +210,9 @@ function NativeSyntaxHighlighter(_ref10) {
           defaultColor: defaultColor,
           fontFamily: fontFamily,
           fontSize: fontSize,
-          padding: 0,
-          margin: 0
-        })
+          padding: 0
+        }),
+        customStyle: { padding: 0, margin: 0 }
       }),
       children
     )

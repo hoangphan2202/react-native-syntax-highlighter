@@ -127,15 +127,14 @@ function createNativeElement({ node, stylesheet, key, defaultColor, fontFamily, 
   }
 }
 
-function nativeRenderer({ defaultColor, fontFamily, fontSize,padding, margin }) {
+function nativeRenderer({ defaultColor, fontFamily, fontSize }) {
   return ({ rows, stylesheet }) => rows.map((node, i) => createNativeElement({
     node,
     stylesheet,
     key: `code-segment-${i}`,
     defaultColor,
     fontFamily,
-    fontSize,
-    padding, margin
+    fontSize
   }))
 }
 
@@ -169,9 +168,9 @@ function NativeSyntaxHighlighter({
              defaultColor,
              fontFamily,
              fontSize,
-             padding: 0,
-             margin: 0
+             padding: 0
            }))}
+           customStyle={{ padding: 0, margin: 0 }}
        >
          {children}
        </Highlighter>
