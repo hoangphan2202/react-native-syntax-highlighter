@@ -202,17 +202,24 @@ function NativeSyntaxHighlighter(_ref10) {
     _reactNative.Pressable,
     null,
     _react2.default.createElement(
-      Highlighter,
-      _extends({}, rest, {
-        style: transformedStyle,
-        horizontal: true,
-        renderer: nativeRenderer({
-          defaultColor: defaultColor,
-          fontFamily: fontFamily,
-          fontSize: fontSize
-        })
-      }),
-      children
+      _reactNative.ScrollView,
+      {
+        contentInsetAdjustmentBehavior: 'automatic',
+        horizontal: true
+      },
+      _react2.default.createElement(
+        Highlighter,
+        _extends({}, rest, {
+          style: transformedStyle,
+          horizontal: true,
+          renderer: nativeRenderer({
+            defaultColor: defaultColor,
+            fontFamily: fontFamily,
+            fontSize: fontSize
+          })
+        }),
+        children
+      )
     )
   );
 }

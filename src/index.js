@@ -159,19 +159,24 @@ function NativeSyntaxHighlighter({
     SyntaxHighlighter
   );
   return (
-    <Pressable >
-      <Highlighter
-          {...rest}
-          style={transformedStyle}
-          horizontal={true}
-          renderer={(nativeRenderer({
-            defaultColor,
-            fontFamily,
-            fontSize
-          }))}
-      >
-        {children}
-      </Highlighter>
+    <Pressable>
+     <ScrollView
+         contentInsetAdjustmentBehavior="automatic"
+         horizontal={true}
+     >
+       <Highlighter
+           {...rest}
+           style={transformedStyle}
+           horizontal={true}
+           renderer={(nativeRenderer({
+             defaultColor,
+             fontFamily,
+             fontSize
+           }))}
+       >
+         {children}
+       </Highlighter>
+     </ScrollView>
     </Pressable>
   );
 }
