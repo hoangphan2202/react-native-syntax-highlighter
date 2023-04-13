@@ -159,7 +159,7 @@ function NativeSyntaxHighlighter({
     SyntaxHighlighter
   );
   return (
-
+    <Pressable>
        <Highlighter
            {...rest}
            style={transformedStyle}
@@ -167,13 +167,14 @@ function NativeSyntaxHighlighter({
            renderer={(nativeRenderer({
              defaultColor,
              fontFamily,
-             fontSize
+             fontSize,
+             padding: 0,
+             margin: 0
            }))}
        >
-         <Pressable>
          {children}
-         </Pressable>
        </Highlighter>
+    </Pressable>
   );
 }
 
