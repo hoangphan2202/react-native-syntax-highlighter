@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/conorhastings/react-native-syntax-highlighter#readme",
   "dependencies": {
-    "react-syntax-highlighter": "^6.0.4"
+    "react-syntax-highlighter": "^15.5.0"
   },
   "peerDependencies": {
     "react-syntax-highlighter": "^6.0.4"
